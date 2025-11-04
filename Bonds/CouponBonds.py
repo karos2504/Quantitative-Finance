@@ -1,4 +1,4 @@
-from math import exp
+import numpy as np
 
 class CouponBonds:
     def __init__(self, principal, rate, maturity, interest_rate):
@@ -7,11 +7,11 @@ class CouponBonds:
         self.maturity = maturity
         self.interest_rate = interest_rate / 100
 
-    # def present_value(self, x, n):
-    #     return x / (1 + self.interest_rate)**n
+    # def present_value(self, x, t):
+    #     return x / (1 + self.interest_rate)**t
 
-    def present_value(self, x, n):
-        return x * exp(-self.interest_rate*n)
+    def present_value(self, x, t):
+        return x * np.exp(-self.interest_rate*t)
 
     def calculate_price(self):
         price = 0

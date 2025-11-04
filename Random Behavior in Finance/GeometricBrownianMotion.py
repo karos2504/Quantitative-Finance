@@ -20,7 +20,7 @@ def simulate_geometric_random_walk(S0, T=2, N=1000, mu=0.1, sigma=0.05):
 
 def plot_simulation(t, S, n_paths=1):
     plt.figure(figsize=(8, 5))
-    for i in range(n_paths):
+    for _ in range(n_paths):
         if n_paths > 1:
             _, S = simulate_geometric_random_walk(S0=1)
         plt.plot(t, S)

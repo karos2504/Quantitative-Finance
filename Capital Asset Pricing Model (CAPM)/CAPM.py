@@ -3,13 +3,10 @@ import pandas as pd
 import yfinance as yf
 import matplotlib.pyplot as plt
 
-# Market interest rate
 RISK_FREE_RATE = 0.05
-# We will consider monthly returns - and we want to calculate the annual return
 MONTHS_IN_YEAR = 12
 
 class CAPM:
-
     def __init__(self, stocks, start_date, end_date):
         self.data = None
         self.stocks = stocks

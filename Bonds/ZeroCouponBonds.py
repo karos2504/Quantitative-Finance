@@ -1,19 +1,15 @@
-from math import exp
-
+import numpy as np
 class ZeroCouponBonds:
     def __init__(self, principal, maturity, interest_rate):
-        # Principal amount
         self.principal = principal
-        # Date to maturity
         self.maturity  = maturity
-        # Market interest rate (discounting)
         self.interest_rate = interest_rate / 100
 
-    # def present_value(self, x, n):
-    #     return x / (1 + self.interest_rate)**n
+    # def present_value(self, x, t):
+    #     return x / (1 + self.interest_rate)**t
     
-    def present_value(self, x, n):
-        return x * exp(-self.interest_rate*n)
+    def present_value(self, x, t):
+        return x * np.exp(-self.interest_rate*t)
 
     def calculate_price(self):
         return self.present_value(self.principal, self.maturity)

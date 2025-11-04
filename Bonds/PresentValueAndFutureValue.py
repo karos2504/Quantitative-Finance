@@ -1,4 +1,4 @@
-from math import exp
+import numpy as np
 
 def present_discrete_value(x, r, n):
     return x / (1 + r)**n
@@ -7,10 +7,10 @@ def future_discrete_value(x, r, n):
     return x * (1 + r)**n
 
 def present_continuous_value(x, r, t):
-    return x / exp(r * t)
+    return x / np.exp(r * t)
 
 def future_continuous_value(x, r, t):
-    return x * exp(r * t) 
+    return x * np.exp(r * t) 
 
 if __name__ == '__main__':
     # Value of investment on value

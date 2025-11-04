@@ -50,7 +50,7 @@ if __name__ == "__main__":
 
     # Historical data to approximate mean and standard deviation
     start_date = datetime.datetime(2015, 1, 1)
-    end_date = datetime.datetime(2025, 10, 1)
+    end_date = datetime.datetime(2025, 1, 1)
 
     # Create and run the model
     model = ValueAtRiskMonteCarlo(stock, start_date, end_date, S, c, n, iterations)
